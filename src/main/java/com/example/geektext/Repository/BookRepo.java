@@ -1,10 +1,9 @@
 package com.example.geektext.Repository;
-import com.example.geektext.Entity.Books;
+
+import com.example.geektext.Entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
-public interface BookRepo extends JpaRepository<Books, String>{
-    List<Books> findByGenre(String genre);
-
-}
+@Repository
+public interface BookRepo extends JpaRepository<Book, String> {}
